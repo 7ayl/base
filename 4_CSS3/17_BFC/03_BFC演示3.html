@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_BFC演示3</title>
+    <style>
+        .outer{
+            width: 400px;
+            background-color: paleturquoise;
+            /* float: left; */
+            /* position: absolute; */
+            /* display: inline-block; */
+            /* display: table; */
+            /* overflow: hidden; */
+            /* column-count: 2; */
+            /* display: flow-root; */
+        }
+        .inner{
+            width: 100px;
+            height: 100px;
+        }
+        .inner1{
+            background-color: palevioletred;
+        }
+        .inner2{
+            background-color: palegreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner1"></div>
+        <div class="inner inner2"></div>
+    </div>
+</body>
+</html>

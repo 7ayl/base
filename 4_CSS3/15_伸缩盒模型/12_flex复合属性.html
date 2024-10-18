@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_侧轴对齐_多行</title>
+    <style>
+        body{
+            display: flex;
+        }
+        .outer{
+            width: 600px;
+            height: 900px;
+            background-color: #888;
+            margin: 0 auto;
+
+            /* ************伸缩盒模型相关属性*********** */
+
+
+            /* 将该元素变为了伸缩容器（开启了flex布局） */
+            display: flex;
+
+            /* 调整主轴方向，水平从左到右，默认 */
+            flex-direction: row;
+
+            /* 主轴换行方式，换行 */
+            /* flex-wrap: wrap; */
+
+            /* 主轴的对齐方式,主轴的起始位置 */
+            justify-content: flex-start;
+
+        }
+        .inner{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            border: 1px solid black;
+            box-sizing: border-box;
+            
+            /* 可以拉伸 */
+            /* flex-grow: 1; */
+
+            /* 可以压缩 */
+            /* flex-shrink: 1; */
+
+            /* 基准长度 */
+            /* flex-basis: 100px; */
+
+            /* 可以拉伸 可以压缩 不设置基准长度，可以简写为：flex:auto */
+            /* flex: 1 1 100px; */
+            
+            /* 可以拉伸 可以压缩 设置基准长度为0，可以简写为:flex:1(用得多) */
+            /* flex: 1 1 0; */
+
+            /* 不可以拉伸 不可以压缩 不设置基准长度，可以简写为:flex:none */
+            /* flex: 0 0 auto; */
+
+            /* 不可以拉伸 可以压缩 不设置基准长度,可以简写为:flex:0 auto*/
+            /* flex: 0 1 auto; */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <span class="inner inner1">1</span>
+        <span class="inner inner2">2</span>
+        <span class="inner inner3">3</span>
+    </div>
+</body>
+</html>

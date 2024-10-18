@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>04_子代选择器</title>
+    <style>
+        div>a{
+            color: antiquewhite;
+        }
+        div>p>a{
+            color: skyblue;
+        }
+        .foot>a{
+            color: aqua;
+        }
+        /* div.foot>a  div的后面没有空格就表示为交集，有为并集 （元素即是div类名又得是foot的子代只有第二个div）*/
+        /* #foot>a{
+            color: azure;
+        } */
+        /* 用>连接选择器 */
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#">张三</a>
+        <a href="#">李四</a>
+        <a href="#">王五</a>
+        <p>
+            <a href="#">赵六</a>
+            <!-- <div id="foot"> -->
+            <div class="foot">
+                <!-- class选择器的优先级高于元素选择器 -->
+                <a href="#">孙七</a>
+            </div>
+            <!-- p里不能放div -->
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_边框的外轮廓</title>
+    <style>
+        .box1{
+            width: 400px;
+            height: 400px;
+            padding: 10px;
+            border: 10px solid black;
+            font-size: 40px;
+            margin: 0 auto;
+            margin-top: 100px;
+
+            /* outline-width: 20px; */
+            /* outline-color: paleturquoise; */
+            /* outline-style: solid; */
+            outline-offset: 10px;
+            /* outline-offset不是outline的子属性！两者是老婆和老婆饼的关系，可以认为外轮廓是发出来的光 */
+            outline: 20px paleturquoise solid ;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">你好阿</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur aperiam magnam nam, adipisci eos animi consequatur. Eos alias totam sunt, autem quis accusamus ullam! Eligendi ullam officia deserunt laudantium culpa.</div>
+</body>
+</html>

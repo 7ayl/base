@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_新增音频标签</title>
+    <style>
+        audio{
+            width: 600px;
+            /* height: 500px; */
+            border: 1px solid black;
+        }
+        .mask{
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.727);
+        }
+        .dialog{
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            font-size: 40px;
+            text-align: center;
+            line-height: 400px;
+        }
+        span{
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <audio src="./小曲.mp3" controls autoplay loop preload="auto"></audio>
+    <div class="mask" id="mask">
+        <div class="dialog">
+            <span>点我登陆</span>
+            <span onclick="">随便听听</span>
+        </div>
+    </div>
+    <script>
+        function go(){
+            music.play()
+            mask.style.display ='none'
+        }
+    </script>
+</body>
+</html>

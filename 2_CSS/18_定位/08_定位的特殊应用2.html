@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>08_定位的特殊应用2</title>
+    <style>
+        .outer{
+            width: 800px;
+            height: 400px;
+            background-color: paleturquoise;
+            position: relative;
+            /* overflow: hidden; */
+        }
+        .inner{
+            /* width: 400px; */
+            /* height: 100px; */
+            background-color: skyblue;
+            font-size: 20px;
+            position: absolute;
+
+            /* 方案一 */
+            /* top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto; */
+            
+            /* 我的方案 ，其他方案要有宽高才能用哦！嘿嘿*/
+            /* left: 25%;
+            top: 25%;
+            right: 25%;
+            bottom: 25%; */
+            
+            /* 方案二 */
+            /* left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            margin-top: -50px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">你好阿</div>
+    </div>
+</body>
+</html>

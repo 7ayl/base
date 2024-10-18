@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>05_解决浮动后的影响</title>
+    <style>
+        .outer{
+            width: 500px;
+            background-color: skyblue;
+            border: 1px solid black;
+            
+            /* 第一种解决方案 */
+            /* height: 122px; */
+
+            /* 第二种解决方案 */
+            /* float: left; */
+
+            /* 第三种解决方案 */
+            /* overflow: scroll; */
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        .box1,.box2,.box3{
+            float: left;
+        }
+        /* .box4{
+            clear: both;
+            消除前边所有浮动兄弟产生的影响
+        } */            
+        
+        /* 第四种方案 */
+        /* .mofa{
+            clear: both;
+        } */
+
+        /* 第五种解决方案 */
+        .outer::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        /* .box4{
+            display: inline-block;
+            height: 250px;
+        } */
+        
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+
+        <!-- <div class="mofa"></div> -->
+    </div>
+    <div style="background-color: aquamarine;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis tempora, odit eos amet molestias maxime eveniet ex quam ipsum dicta ullam numquam commodi ratione fuga exercitationem delectus, saepe cum voluptatem consectetur minus nisi. Magnam rerum earum repellat voluptas magni voluptatibus fuga molestiae dolore accusantium rem, dolorum consequatur debitis maxime tempora repellendus consequuntur ad vero quo sequi doloremque voluptate dolorem. Voluptate atque qui provident nobis mollitia laborum veniam excepturi voluptatibus impedit est ducimus, expedita soluta voluptatem illum obcaecati, dicta distinctio incidunt reiciendis maiores facilis exercitationem quidem! Modi voluptatem magni consectetur nam cum ullam deserunt voluptatibus velit sint, itaque adipisci dolor facilis beatae temporibus harum molestias rem tempora amet cupiditate dicta? Alias suscipit libero quos ipsum quasi eaque recusandae eligendi, nam animi qui explicabo tempore voluptatem eos ullam? Commodi tempora iure perspiciatis, in delectus quasi, qui fuga similique dicta dolor error amet ipsam obcaecati voluptatem sint? Voluptas ab similique rem neque sed est ducimus repudiandae non numquam. Corrupti in commodi maxime, nisi similique, quo adipisci natus earum deleniti itaque libero alias doloremque, magnam minus modi enim. Similique recusandae, perspiciatis exercitationem unde praesentium maxime voluptatibus, suscipit repellat modi, vitae eveniet. Officia, dicta! Ducimus distinctio labore similique alias asperiores ut voluptatem consectetur totam aperiam?</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_绝对定位</title>
+    <style>
+        .outer{
+            width: 500px;
+            background-color: skyblue;
+            border: 1px solid black;
+            padding: 20px;
+            position: relative;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+        }
+        .box1{
+            background-color: palegoldenrod;
+        }
+        .box2{
+            background-color: palegreen;
+            position: absolute;
+            top: 220px;
+            left: 20px;
+            /* transition: 1s all linear; */
+            /* right: 100px; */
+            /* bottom: -50px; */
+            /* margin-left: 50px; */
+            /* margin-top: 50px; */
+            /* margin-right: 3000px; */
+            float: right;
+        }
+        .box3{
+            background-color: paleturquoise;
+        }
+        .outer:hover .box2{
+            left: 220px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</body>
+</html>

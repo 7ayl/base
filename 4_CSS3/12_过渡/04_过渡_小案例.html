@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_过渡_小案例</title>
+    <style>
+        img{
+            width: 400px;
+            height: 500px;
+            transition: 0.5s linear;
+        }
+        .outer{
+            width: 400px;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+        .mask{
+            width: 400px;
+            height: 500px;
+            background-color: paleturquoise;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            line-height: 500px;
+            font-size: 100px;
+            opacity: 0;
+            transition: 1s linear all;
+            cursor: pointer;
+        }
+        .outer:hover .mask{
+            opacity: 0.5;
+        }
+        .outer:hover img{
+            transform: scale(1.6) rotate(20deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <img src="./IMG_0081.JPG" alt="77">
+        <div class="mask">老公</div>
+    </div>
+</body>
+</html>
